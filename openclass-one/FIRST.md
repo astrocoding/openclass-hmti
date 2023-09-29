@@ -169,3 +169,164 @@ else:
 
 ### D. Algorithms (Algoritma)
 > Urutan langkah-langkah sistematis, logis dan efektif untuk menyelesaikan suatu permasalahan.
+
+![Algorithms](../img/algoritma.jpg)
+
+**Algoritma: Membuat Roti Panggang**
+1. Siapkan roti tawar.
+2. Panggang roti hingga kecoklatan di oven atau pemanggang roti.
+3. Setelah roti matang, angkat dari oven atau pemanggang.
+4. Olesi permukaan roti dengan mentega.
+5. Olesi permukaan roti dengan selai strawberry.
+6. Letakkan roti di atas piring.
+7. Sajikan roti panggang.
+
+**Contoh Algoritma Sederhana Dalam Python:**
+```python
+# Fungsi untuk Membuat Roti Panggang
+def buat_roti_panggang():
+    print("1. Siapkan roti tawar.")
+    print("2. Panggang roti hingga kecoklatan di oven atau pemanggang roti.")
+    print("3. Setelah roti matang, angkat dari oven atau pemanggang.")
+    print("4. Olesi permukaan roti dengan mentega.")
+    print("5. Olesi permukaan roti dengan selai strawberry.")
+    print("6. Letakkan roti di atas piring.")
+    print("7. Sajikan roti panggang.")
+
+# Memanggil Fungsi untuk Membuat Roti Panggang
+buat_roti_panggang()
+```
+---
+### PEMROGRAMAN DASAR DENGAN PYTHON
+> Pemrograman adalah proses membuat rangkaian instruksi atau algoritma yang ditulis dalam bahasa yang dapat dimengerti oleh komputer.
+
+**COMPILER DAN INTERPRETER**
+> **Compiler** adalah program komputer yang menerjemahkan kode sumber keseluruhan ke dalam bahasa mesin atau kode biner. Proses ini menghasilkan file yang dapat dieksekusi secara independen tanpa memerlukan compiler lagi setiap kali program dijalankan.
+
+Sedangkan
+
+> **Interpreter** adalah program komputer yang mengeksekusi kode sumber secara baris per baris tanpa menghasilkan file terpisah. Setiap baris dieksekusi secara langsung saat program berjalan.
+
+**KONSEP DALAM PEMROGRAMAN DASAR**
+1. **Variable dan Konstanta**
+   > **Variable** Wadah/tempat untuk menyimpan data yang dapat berubah selama eksekusi program.
+   > **Konstanta** Nilai yang tetap dan tidak dapat diubah selama eksekusi program.
+    **Contoh Program:**
+   ```python
+   # Variable
+   umur = 20
+   nama = "Zaenal Alfian"
+   # Konstanta
+   PI = 3.14
+   ```
+2. **Tipe Data**
+   > Jenis nilai yang dapat disimpan dalam sebuah variable atau konstanta. Contoh: `integer, float, string, boolean.`
+   **Contoh Program:**
+   ```python
+   # Tipe Data Integer
+   umur = 20
+   # Tipe Data Float
+   tinggi = 180.3
+   # Tipe Data String
+   nama = "Zaenal Alfian"
+   # Tipe Data Boolean
+   sudah_menikah = False
+   ```
+4. **Operator**
+   > Simbol atau kata kunci yang digunakan untuk melakukan operasi pada data. Contoh: `+ (penjumlahan)`, `== (sama dengan)`, and `(logika AND)`.
+   
+   **Operator Aritmetika:**
+   ```python
+   # Operator Aritmetika
+   a = 10
+   b = 5
+
+   penjumlahan = a + b
+   pengurangan = a - b
+   perkalian = a * b
+   pembagian = a / b
+   modulo = a % b
+   pangkat = a ** b
+
+   print(penjumlahan, pengurangan, perkalian, pembagian, modulo, pangkat)
+   ```
+   **Operator Perbandingan:**
+   ```python
+   # Operator Perbandingan
+   x = 10
+   y = 20
+
+   lebih_besar = x > y
+   kurang_dari = x < y
+   sama_dengan = x == y
+   tidak_sama_dengan = x != y
+   lebih_besar_sama_dengan = x >= y
+   kurang_dari_sama_dengan = x <= y
+
+   print(lebih_besar, kurang_dari, sama_dengan, tidak_sama_dengan, lebih_besar_sama_dengan, kurang_dari_sama_dengan)
+   ```
+   **Operator Logika**
+   ```python
+   # Operator Logika
+   p = True
+   q = False
+
+   and_operator = p and q
+   or_operator = p or q
+   not_operator_p = not p
+   not_operator_q = not q
+
+   print(and_operator, or_operator, not_operator_p, not_operator_q)
+   ```
+6. **Logika Perbandingan**
+   > Membandingkan nilai atau ekspresi untuk menentukan kebenaran suatu pernyataan. Contoh: `> (lebih besar dari)`, `== (sama dengan)`, `!= (tidak sama dengan)`. Nilai yang dikembalikan adalah tipe data `boolean`
+   **Contoh Program:**
+   ```python
+   umur = 18
+   if umur < 18:
+       print("Anda masih di bawah umur")
+   elif umur == 18:
+       print("Anda baru saja berusia 18 tahun")
+   else:
+       print("Anda sudah dewasa")
+   ```
+8. **Logika Perulangan**
+   > Mengulang serangkaian instruksi sampai kondisi tertentu terpenuhi. Contoh: for loop, while loop, do while loop.
+   **Contoh Program:**
+   ```python
+   # For Loop
+   for i in range(5):
+       print(i)
+   
+   # While Loop
+   angka = 1
+   while angka <= 5:
+       print(angka)
+       angka += 1
+   ```
+10. **Fungsi**
+    > Blok kode yang dapat digunakan kembali untuk melakukan tugas tertentu. Didefinisikan dengan nama dan dapat menerima argumen/parameter
+    **Contoh Program:**
+    ```python
+    def luas_persegi(sisi):
+        return sisi * sisi
+
+    luas = luas_persegi(4)
+    print(f"luas persegi = {luas}")
+    ```
+12. **Struktur Data**
+    > Cara untuk mengorganisasi dan menyimpan data agar dapat diakses dan dikelola dengan efisien. Contoh: `array`, `list`, `tuple`, `dictionary`.
+    **Contoh Program:**
+    ```python
+    # List (Daftar)
+    buah = ["apel", "jeruk", "mangga", "pisang"]
+
+    # Tuple
+    koordinat = (10, 20)
+
+    # Dictionary
+    mahasiswa = {"nama": "Zaenal Alfian", "umur": 20, "prodi": "Teknik Informatika"}
+    ```
+---
+Credits: [Zaenal Alfian](https://github.com/astrocoding)
+Last Edited on: 30/09/2023
