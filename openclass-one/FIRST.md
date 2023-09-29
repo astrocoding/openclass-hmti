@@ -121,5 +121,51 @@ else:
 
 ![Abstraction](../img/abstraction.webp)
 
+**Analogi: Pemilihan Playlist Musik**
+
+Bayangkan kamu sedang menggunakan aplikasi musik seperti Spotify dan ingin memilih playlist untuk suasana hati tertentu, misalnya "Santai". Ketika kamu memilih playlist "Santai", kamu sebenarnya tidak perlu tahu setiap lagu yang ada di dalamnya atau bagaimana dibuatnya. Kamu hanya perlu tahu bahwa playlist ini cocok untuk suasana hati santai.
+
+Nah, dalam kasus ini kamu telah melakukan abstraksi terhadap kumpulan lagu dalam playlist. Kamu tidak perlu sampai memikirkan detail dari setiap lagu, tetapi cukup menggunakan abstraksi "Playlist Santai" untuk mencapai tujuanmu **(Mendengarkan musik santai)**.
+
+> Dalam Computational Thinking, **abstraction** memungkinkan kita untuk fokus pada informasi yang penting saja dan mengabaikan detail yang tidak relevan. Seperti dalam contoh ini, kamu fokus pada tujuan akhir (mendengarkan musik santai) tanpa harus tahu semua lagu di dalam playlist tersebut.
+
+**Contoh Abstraction Dalam Pemrograman Python:**
+```python
+# Daftar Playlist Musik
+playlist_santai = ["Lagu Santai 1", "Lagu Santai 2", "Lagu Santai 3", "Lagu Santai 4"]
+playlist_energik = ["Lagu Energi 1", "Lagu Energi 2", "Lagu Energi 3", "Lagu Energi 4"]
+
+# Fungsi untuk Memilih Playlist
+def pilih_playlist(suasana_hati):
+    if suasana_hati == "santai":
+        return playlist_santai
+    elif suasana_hati == "energik":
+        return playlist_energik
+    else:
+        return []
+
+# Meminta Input Suasana Hati dari Pengguna
+suasana_hati = input("Masukkan suasana hati Anda (santai / energik): ")
+
+# Memilih Playlist Sesuai Suasana Hati
+playlist_terpilih = pilih_playlist(suasana_hati)
+
+# Menampilkan Playlist Terpilih
+if playlist_terpilih:
+    print(f"Playlist {suasana_hati}:")
+    for lagu in playlist_terpilih:
+        print(f"- {lagu}")
+else:
+    print("Playlist tidak ditemukan.")
+```
+**Bedah Program:**
+1. Program memiliki dua daftar playlist: `playlist_santai` dan `playlist_energik`.
+2. Fungsi `pilih_playlist` menerima input `suasana_hati` dan mengembalikan playlist sesuai dengan suasana hati yang diminta.
+3. Pengguna diminta untuk memasukkan suasana hati mereka (santai atau energik).
+4. Program memilih playlist berdasarkan input pengguna dan menampilkannya.
+5. Misalnya, jika pengguna memasukkan "santai", program akan menampilkan playlist santai. Jika pengguna memasukkan sesuatu selain "santai" atau "energik", program akan memberikan pesan bahwa playlist tidak ditemukan.
+
+---
+
 ### D. Algorithms (Algoritma)
 > Urutan langkah-langkah sistematis, logis dan efektif untuk menyelesaikan suatu permasalahan.
