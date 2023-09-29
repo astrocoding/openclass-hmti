@@ -28,7 +28,7 @@
 * Hidangkan kopi
 
 **Contoh Dekomposisi Dalam Pemrograman Python:**
-```
+```python
 # Langkah 1: Mempersiapkan Air Panas
 def mempersiapkan_air():
     print("Panaskan air hingga mendidih.")
@@ -44,9 +44,7 @@ def membuka_sachet():
 # Langkah 4: Menyeduh Kopi
 def menyeduh_kopi():
     print("Masukkan sachet kopi ke dalam cangkir.")
-
     print("Tuangkan air panas ke dalam cangkir dengan sachet kopi.")
-
     print("Aduk perlahan untuk memastikan kopi tercampur dengan baik.")
 
 # Langkah 5: Menikmati Kopi
@@ -63,11 +61,43 @@ def menyeduh_kopi_sachet():
 
 # Panggil Fungsi Utama
 menyeduh_kopi_sachet()
-
 ```
+> Pada contoh program di atas, setiap langkah dipecah ke dalam beberapa prosedur sehingga lebih memudahkan untuk diolah, diproses, dan dipahami. Coba bayangkan kalau kamu menyatukan seluruh proses di atas tanpa memecah setiap bagiannya, maka tentu saja program akan terlihat terlalu kompleks dan sulit untuk dipahami.
 
 ### B. Pattern recognition (Pengenalan Pola)
 > Mencari dan menganalisa persamaan atau pola yang terdapat di dalam suatu permasalahan.
+
+**Analogi: Pola pada Deret Angka**
+
+Bayangkan kamu memiliki deret angka berikut: `2, 4, 6, 8, 10.`
+
+Dalam deret ini, kita bisa mengenali bahwa setiap angka berikutnya merupakan angka genap dan hasil penambahan 2 dari angka sebelumnya (kelipatan 2).
+Misal, `2 + 2 = 4`, `4 + 2 = 6`, `6 + 2 = 8` dan seterusnya.
+
+> Dengan penerapan **pattern recognition**, kita bisa dengan cepat mengidentifikasi hubungan atau aturan tertentu di antara elemen-elemen suatu set atau deret data (berlaku juga untuk permasalahan lain secara luas). Dengan begitu, kita bisa dengan lebih mudah untuk memahami dan memprediksi apa yang akan terjadi selanjutnya.
+
+**Contoh Pattern Recognition Dalam Pemrograman Python**
+```python
+# Fungsi untuk Mengenali Pola pada Deret Angka
+def mengenali_pola(deret):
+    pola = deret[1] - deret[0]  # Menghitung pola dari selisih elemen pertama dan kedua
+    for i in range(1, len(deret)-1):
+        if deret[i+1] - deret[i] != pola:
+            return None  # Jika selisih antar elemen tidak sama, maka tidak ada pola
+    return pola
+
+# Deret Angka
+deret_angka = [2, 4, 6, 8, 10]
+
+# Mengenali Pola pada Deret Angka
+hasil_pola = mengenali_pola(deret_angka)
+
+# Menampilkan Hasil
+if hasil_pola is not None:
+    print(f"Pola deret angka adalah penambahan {hasil_pola}")
+else:
+    print("Tidak ada pola yang teridentifikasi dalam deret angka.")
+```
 
 ### C. Abstraction (Abstraksi)
 > Fokus pada informasi yang penting saja dan mengabaikan informasi lain yang tidak relevan
