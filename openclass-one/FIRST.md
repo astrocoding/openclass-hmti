@@ -8,7 +8,7 @@
 ### APA ITU COMPUTATIONAL THINKING?
 > Sederhananya, **Computational Thinking** adalah kemampuan untuk memecahkan masalah kompleks dengan menggunakan prinsip-prinsip pemrograman dan logika komputasi.
 
-![Computational Thinking](../img/computational_thinking.png)
+![Computational Thinking](../img/computational_thinking.jpg)
 
 **Terdapat 4 landasan utama pada konsep Computational Thinking**
 1. Decomposition (Dekomposisi)
@@ -119,7 +119,7 @@ else:
 ### C. Abstraction (Abstraksi)
 > Fokus pada informasi yang penting saja dan mengabaikan informasi lain yang tidak relevan
 
-![Abstraction](../img/dekomposisi.png)
+![Abstraction](../img/abstraction.webp)
 
 ### D. Algorithms (Algoritma)
 > Urutan langkah-langkah sistematis, logis dan efektif untuk menyelesaikan suatu permasalahan.
