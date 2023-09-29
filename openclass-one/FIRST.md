@@ -64,8 +64,14 @@ menyeduh_kopi_sachet()
 ```
 > Pada contoh program di atas, setiap langkah dipecah ke dalam beberapa prosedur sehingga lebih memudahkan untuk diolah, diproses, dan dipahami. Coba bayangkan kalau kamu menyatukan seluruh proses di atas tanpa memecah setiap bagiannya, maka tentu saja program akan terlihat terlalu kompleks dan sulit untuk dipahami.
 
+---
+
 ### B. Pattern recognition (Pengenalan Pola)
 > Mencari dan menganalisa persamaan atau pola yang terdapat di dalam suatu permasalahan.
+
+**Perhatikan Gambar Berikut!**
+![Dekomposisi](../img/pattern.png)
+>Apa yang berhasil kamu tangkap dari gambar tersebut?
 
 **Analogi: Pola pada Deret Angka**
 
@@ -98,6 +104,15 @@ if hasil_pola is not None:
 else:
     print("Tidak ada pola yang teridentifikasi dalam deret angka.")
 ```
+**Bedah Program:**
+1. Fungsi `mengenali_pola` akan menerima sebuah deret angka dan mencoba mengenali pola di antara elemen-elemennya.
+2. Program akan memeriksa apakah selisih antar elemen berurutan adalah konstan. Jika iya, maka program akan mengembalikan pola penambahan tersebut.
+3. Dalam contoh deret angka `[2, 4, 6, 8, 10]`, program akan mengenali pola sebagai penambahan 2.
+4. Hasil dari pengenalan pola akan ditampilkan.
+   
+> Jika kamu ingin mencoba dengan deret angka lain, cukup ubah nilai pada variabel `deret_angka` sesuai keinginanmu. Misalnya, deret_angka = `[3, 6, 9, 12, 15]` akan menghasilkan pola penambahan 3.
+
+---
 
 ### C. Abstraction (Abstraksi)
 > Fokus pada informasi yang penting saja dan mengabaikan informasi lain yang tidak relevan
