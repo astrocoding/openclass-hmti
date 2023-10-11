@@ -327,3 +327,8 @@ Sekarang file HTML dan CSS sudah terhubung, lalu kita kembali lagi kedalam file 
   cursor: pointer;
 }
 ```
+Maka hasilnya akan menjadi seperti berikut :
+![preview2](./img/1.png)
+Tidak perlu khawatir dengan teks yang berantakan karena akan kita atur di file CSS.
+
+Sekarang tekan F12 dikeyboard kalian karena kita akan membuat sebuah kode responsive difile CSS.
