@@ -19,6 +19,7 @@ Pada praktek kali ini kita akan membuat sebuah website portofolio dimana website
 2. Buka VSCode lalu klik File > Open Folder > pilih folder kalian.
 3. Tambahkan sebuah file dengan nama **index.html**.
 
+### Membuat Syntax HTML
 Didalam file index.html ketik ! dan tekan Tab pada keyboard maka akan terbuat sebuah syntax HTML seperti ini :
 ```html
 <!DOCTYPE html>
@@ -79,6 +80,7 @@ Didalam file index.html ketik ! dan tekan Tab pada keyboard maka akan terbuat se
 Maka hasilnya akan seperti ini :
 ![Header](../img/Header.png)
 
+### Membuat Elemen Main, Section, dan div
 Buatlah sebuah elemen **main** yang didalamnya ada elemen **section** dan **div**
 ```html
 <main class="main">
