@@ -602,3 +602,4 @@ Masukkan kode berikut ini.
 }
 ```
 Sekarang kita sudah memiliki sebuah website yang responsive.
+![preview4](./img/3.png)
