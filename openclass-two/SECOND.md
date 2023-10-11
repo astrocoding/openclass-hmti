@@ -33,7 +33,7 @@ Didalam file index.html ketik ! dan tekan Tab pada keyboard maka akan terbuat se
 </body>
 </html>
 ```
-Lalu kita akan membuat Header dan Navbar terlebih dahulu
+## Lalu kita akan membuat Header dan Navbar terlebih dahulu
 ```html
     <!-- HEADER -->
     <header class="header" id="header">
@@ -158,4 +158,172 @@ Buatlah sebuah elemen **main** yang didalamnya ada elemen **section** dan **div*
         </div>
       </section>
     </main>
+```
+Jika sudah lalu kita ke file styles.css dan kita buat agar website kita menjadi lebih rapih dan terstruktur.
+
+Pertama kalian bisa copy kode berikut ini :
+```css
+:root {
+  --header-height: 3.5rem;
+
+  --hue: 162;
+  --first-color: hsl(var(--hue), 100%, 40%);
+  --first-color-alt: hsl(var(--hue), 56%, 35%);
+  --title-color: hsl(228, 8%, 95%);
+  --text-color: hsl(228, 8%, 65%);
+  --body-color: hsl(228, 15%, 20%);
+  --container-color: hsl(228, 15%, 15%);
+
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+```
+Lalu kita buat sebuah Base didalam file CSS seperti berikut :
+```css
+/* Base */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input,
+textarea,
+button,
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+input,
+textareaa,
+button {
+  outline: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+```
+Sekarang kita hubungkan file HTML dengan CSS-nya dengan menggunakan syntax berikut ini :
+Taruh diatas element <title>
+```html
+<link rel="stylesheet" href="./assets/css/styles.css" />
+```
+Sekarang file HTML dan CSS sudah terhubung, lalu kita kembali lagi kedalam file CSS. Sekarang kita atur setiap elemen yang ada agar rapih dan terstruktur.
+```css
+/* Reusable CSS Classes */
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 2rem;
+}
+
+.section__title,
+.section_subtitle {
+  text-align: center;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.section_subtitle {
+  font-size: var(--small-font-size);
+  margin-bottom: 0.25rem;
+}
+
+.section_subtitle span {
+  color: var(--first-color);
+}
+
+.main {
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--container-color);
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__logo span {
+  color: var(--first-color);
+}
+
+.nav__toggle,
+.nav__close {
+  display: flex;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
 ```
