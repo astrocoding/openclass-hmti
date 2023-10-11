@@ -332,3 +332,273 @@ Maka hasilnya akan menjadi seperti berikut :
 Tidak perlu khawatir dengan teks yang berantakan karena akan kita atur di file CSS.
 
 Sekarang tekan F12 dikeyboard kalian karena kita akan membuat sebuah kode responsive difile CSS.
+
+Jika sudah maka tampilan chrome kalian akan menjadi seperti ini.
+![preview3](./img/2.png)
+
+Sekarang kita atur navbar untuk tampilan mobile.
+```css
+/* Navigation for Mobile */
+@media screen and (max-width: 1023px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: hsla(0, 0%, 10%);
+    width: 75%;
+    height: 100%;
+    padding: 4.5rem 0 0 3rem;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    transition: right 0.4s;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.nav__link {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color 0.4s;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.show-menu {
+  right: 0;
+}
+```
+Sekarang menu pada navbar akan tersembunyi menjadi humburger menu. Tetapi menunya masih belum bisa muncul dikarenakan belum diberikan animasi. Mari kita berikan animasi dengan file JavaScript.
+
+Buatlah sebuah folder baru didalam folder assets dengan nama **js** dan tambahkan file baru dengan nama **main.js**. Kita akan berikan animasi untuk menunya.
+
+didalam file js kita berikan kode berikut.
+```javascript
+// Show Menu
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
+
+// Menu Show
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
+```
+Sekarang kita hubungkan lagi file HTML dengan JavaScript dengan memasukkan kode berikut.
+```html
+<script src="js/main.js"></script>
+```
+Sekarang menu sudah bisa muncul. Sekarang kita tambahkan lagi kode JavaScript untuk menutup menu.
+```javascript
+// Menu Hidden
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
+```
+Sekarang menu sudah bisa muncul dan bisa kita tutup.
+
+Selanjutnya kita akan atur dan rapihkan bagian home__section agar lebih rapih.
+```css
+/* Home */
+.home {
+  background-color: var(--container-color);
+}
+
+.home__container {
+  padding-top: 2rem;
+  row-gap: 2.5rem;
+}
+
+.home__content {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.home__data {
+  text-align: center;
+}
+
+.home__subtitle,
+.home__education {
+  font-size: var(--bigger-font-size);
+}
+
+.home__subtitle span,
+.home__title {
+  color: var(--first-color);
+}
+
+.home__title {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+.home__description {
+  margin-block: 1rem 1.5rem;
+}
+
+.home__social {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.25rem;
+}
+
+.home__social-link {
+  display: flex;
+  background-color: var(--first-color-alt);
+  padding: 0.5rem;
+  color: var(--title-color);
+  font-size: 1.5rem;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: transform 0.4s;
+}
+
+.home__social-link:hover {
+  transform: translateY(-0.25rem);
+}
+
+.home__image {
+  justify-self: center;
+}
+
+.home__blob {
+  width: 320px;
+  fill: var(--first-color);
+  filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, 0.2));
+}
+```
+Setelah itu kita buat sebuah button dengan memberikan kode berikut.
+```css
+/* Button */
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: box-shadow 0.4s;
+}
+
+.button:hover {
+  box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, 0.25);
+}
+```
+
+Sekarang kita sudah berhasil membuat website untuk tampilan mobile tetapi jika kita buka dengan tampilan desktop maka hasilnya akan berantakan. Itu dikarenakan kita belum membuat tampilan desktop didalam file CSS.
+
+Sekarang mari kita buat dan rapihkan untuk tampilan desktopnya.
+
+Masukkan kode berikut ini.
+```css
+/* For Small Device */
+@media screen and (max-width: 320px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .skills__content {
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+  }
+
+  .services__card {
+    padding-block: 1.5rem;
+  }
+}
+
+/* For Medium Device */
+@media screen and (max-width: 576px) {
+  .home__container,
+  .about__container,
+  .skills__container,
+  .services__container,
+  .projects__container,
+  .contact__container {
+    grid-template-columns: 360px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__menu {
+    width: 55%;
+  }
+
+  .home__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .home__data {
+    text-align: initial;
+  }
+
+  .home__social {
+    justify-content: initial;
+  }
+
+  .home__blob {
+    width: 400px;
+  }
+
+  .about__data {
+    order: 1;
+  }
+
+  .services__container {
+    grid-template-columns: repeat(2, 352px);
+  }
+}
+
+/* For Large Device */
+@media screen and (min-width: 1023px) {
+  .section {
+    padding-block: 7rem 2rem;
+  }
+
+  .section_subtitle {
+    font-size: var(--normal-font-size);
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav__close,
+  .nav__toggle {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+
+  .nav__menu {
+    width: initial;
+  }
+
+  .blur-header::after {
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+  }
+}
+```
+Sekarang kita sudah memiliki sebuah website yang responsive.
