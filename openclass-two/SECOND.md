@@ -328,6 +328,19 @@ Sekarang file HTML dan CSS sudah terhubung, lalu kita kembali lagi kedalam file 
   color: var(--title-color);
   cursor: pointer;
 }
+
+@media screen and (min-width: 1152px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --bigger-font-size: 2rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
 ```
 Maka hasilnya akan menjadi seperti berikut :
 ![preview2](./img/1.png)
